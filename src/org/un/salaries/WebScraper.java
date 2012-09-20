@@ -8,7 +8,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -203,13 +202,9 @@ public class WebScraper {
         while (found >= 0) {
             offset = found + 1;
             int valueStart = htmlLower.indexOf("value=\"", offset);
-            String debug = htmlLower.substring(valueStart);
             int valueEnd = htmlLower.indexOf("\"", valueStart+"value=\"".length());
-            debug = htmlLower.substring(valueEnd);
             int tagStart = htmlLower.indexOf(">", offset);
-            debug = htmlLower.substring(tagStart);
             int tagEnd = htmlLower.indexOf("<", tagStart+1);
-            debug = htmlLower.substring(tagEnd);
             if (valueStart < tagStart) {
                 String page = html.substring(valueStart + "value=\"".length(), valueEnd);
                 String pageName = html.substring(tagStart + 1, tagEnd);
