@@ -292,10 +292,8 @@ public class WebScraper {
                 }
                 System.out.println(c.getName() + "\t" + c.getCurrencyCode() + "\t" + (c.getSalary() * c.getMultiplier()) + "\t" + exchg + "\t" + (Country.unicefCountries.contains(c.getName()) ? "x" : ""));
             } catch (MalformedURLException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }

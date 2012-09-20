@@ -14,3 +14,4 @@ Known Issues
 -------------
 Currently, there's a connection issue with Kosovo, and the Eastern Carribean doesn't have a known currency.  Also, the South Sudanese and Eritrean currencies are not available via yahoo! finance, these values had to be determined through a more manual search.
 
+It's also really messy code.  It's a scraper, that will probably break if the UN decides they don't want information collated in this way, or changes the format of their templates, or changes the format of their website, or changes the countries they operate in.  As such it's intentionally throw-away code, and no effort was made to make it nice.  It's here for reference, to prove the accuracy of reports I'm generating with it.
